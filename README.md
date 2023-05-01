@@ -19,3 +19,13 @@
 
 ### Used 3D models:
 * https://github.com/ConstantinoSchillebeeckx/cherry-mx-switch
+
+# Usage
+
+## Firmware
+
+Install Platformio cli/ide and run `pio run --target upload` in order to flash the firmware
+
+## Software
+
+Install [smartwheel-core](https://smartwheel-core.github.io), go to Input -> Serial and change the device port if needed
