@@ -38,8 +38,8 @@ BTN_STATE btn = BTN_STATE::UP;
 void setup()
 {
 	pinMode(BUTTON_PIN, INPUT);
-	pinMode(ENCODER_PIN_A, INPUT);
-	pinMode(ENCODER_PIN_B, INPUT);
+	pinMode(ENCODER_PIN_A, INPUT_PULLUP);
+	pinMode(ENCODER_PIN_B, INPUT_PULLUP);
 
 	Serial.begin(9600);
 
@@ -106,9 +106,6 @@ void loop()
 {
 	int enc_a = digitalRead(ENCODER_PIN_A);
 	int enc_b = digitalRead(ENCODER_PIN_B);
-
-	//Serial.println(enc_a);
-	//Serial.println(enc_b);
 
 	if (enc_a != enc_old_a && enc_a == 1)
 	{
